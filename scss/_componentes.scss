@@ -1,0 +1,342 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    display: grid;
+    min-height: 100vh;
+    grid-template-rows: auto 1fr auto;
+    background-color: antiquewhite;
+
+
+}
+.body__contacto{
+    background-color: antiquewhite;
+}
+
+/*inicio de estilos de clientes*/
+.foto-cliente {
+    width: 200px;
+    height: 150px;
+}
+
+.contenedor {
+    margin: 10px;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: (2, 2fr);
+    grid-template-rows: (2, 3fr);
+    grid-template-areas:
+        " ana paula"
+        "juana federica";
+}
+
+.ana {
+    grid-area: ana;
+}
+
+.paula {
+    grid-area: paula;
+}
+
+.juana {
+    grid-area: juana;
+}
+
+.federica {
+    grid-area: federica;
+}
+
+@media screen and (max-width: 740px) {
+    .contenedor {
+        grid-template-columns: (1, 2fr);
+        grid-template-rows: (4, 3fr);
+        grid-template-areas:
+            " ana"
+            "juana"
+            "paula"
+            "federica";
+    }
+
+    .ana {
+        grid-area: ana;
+    }
+
+    .paula {
+        grid-area: paula;
+    }
+
+    .juana {
+        grid-area: juana;
+    }
+
+    .federica {
+        grid-area: federica;
+    }
+
+}
+
+@media screen and (min-width: 1100px) {
+    .contenedor {
+        grid-template-columns: (3, 2fr);
+        grid-template-rows: (4, 3fr);
+        grid-template-areas:
+            " ana juana paula"
+            "federica 0 0";
+    }
+
+    .ana {
+        grid-area: ana;
+    }
+
+    .paula {
+        grid-area: paula;
+    }
+
+    .juana {
+        grid-area: juana;
+    }
+
+    .federica {
+        grid-area: federica;
+    }
+}
+
+@media screen and (min-width: 1500px) {
+    .contenedor {
+        height: 50vh;
+        grid-template-columns: (1, 2fr);
+        grid-template-rows: (1, 3fr);
+        grid-template-areas:
+        " ana juana paula federica";
+    }
+
+    .ana {
+        grid-area: ana;
+    }
+
+    .paula {
+        grid-area: paula;
+    }
+
+    .juana {
+        grid-area: juana;
+    }
+
+    .federica {
+        grid-area: federica;
+    }
+}
+
+
+.caja {
+    width: 100%;
+    text-align: center;
+    background-color: antiquewhite;
+    transition-duration: 1s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+
+.descripcion-clientes {
+    font-size: 20px;
+    margin: 20px;
+    align-items: center;
+    text-align: center;
+}
+
+/*fin de clientes*/
+
+/*comienzo de estilos index*/
+.carousel-item {
+    width: 100%;
+    border: 3px solid coral;
+    border-radius: 10px;
+}
+.carousel-tamaño{
+    width: 30vw;
+}
+@media screen and (max-width: 1500px) {
+    
+    .carousel-tamaño{
+        width: 60vw;
+        
+    }
+}
+
+.bannerText{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    color: coral;    
+}
+
+.titulo {
+    color: coral;
+}
+
+.box {
+    height: 25px;
+
+}
+
+.historia-peinados{
+    font-size: 20px;
+    max-width: 1200px;
+    margin: 50px;
+    text-align: center;
+    h1{
+        color: coral;
+    }
+}
+.historia-trenzas{
+    font-size: 20px;
+    max-width: 1200px;
+    margin: 50px;
+    text-align: center;
+    h2{
+        color: coral;
+    }
+}
+/*acerca de nosotros*/
+.ul-quienes-somos {
+    text-align: center;
+    list-style: none;
+    padding: 15px;
+}
+/* servicios*/
+.container-edp {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+}
+
+.colum-1 {
+    max-width: 400px;
+
+    h1 {
+        font-size: 32px;
+        text-align: center;
+        color: coral;
+    }
+
+    p {
+        font-size: 20px;
+        color: black;
+        margin: 15px;
+    }
+}
+
+.colum-2 {
+    max-width: 400px;
+
+    h1 {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    p {
+        font-size: 14px;
+        color: black;
+        margin: 15px;
+        text-align: center;
+    }
+
+}
+
+.colum-3 {
+    max-width: 400px;
+
+    h1 {
+        font-size: 24px;
+        text-align: center;
+
+    }
+
+    p {
+        font-size: 14px;
+        color: black;
+        margin: 15px;
+        text-align: center;
+    }
+}
+
+.colum-4 {
+    max-width: 400px;
+
+    h1 {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    p {
+        font-size: 14px;
+        color: black;
+        margin: 15px;
+        text-align: center;
+    }
+}
+
+.row-1 {
+    margin-top: 10px;
+    display: flex;
+    
+    
+}
+
+.row-2 {
+    margin-top: 10px;
+    display: flex;
+    
+
+}
+
+.row-3 {
+    margin-top: 10px;
+    display: flex;
+}
+
+.row-4 {
+    margin-top: 10px;
+    display: flex;
+}
+
+@media screen and (max-width: 1100px) {
+    .container-edp {
+        flex-wrap: wrap;
+    }
+
+    .colum-1 {
+        max-width: 100%;
+    }
+
+    .colum-2,
+    .colum-3,
+    .colum-4 {
+        margin-top: 20px;
+        max-width: 100%;
+    }
+}
+
+/*fin de servicios*/
+/*navbar*/
+.container-fluid {
+    font-size: 20px;
+}
+
+.navbar-brand {
+    font-size: 25px;
+}
+
+/*fin navbar*/
+
