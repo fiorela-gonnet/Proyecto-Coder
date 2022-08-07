@@ -8,7 +8,8 @@
   <link rel="stylesheet" href="../css/bootstrap.min.css">
   <link rel="stylesheet" href="../css/styles.css">
   <title>Contacto - Salón de Belleza | teléfono de salón de belleza</title>
-  <meta name="description" content="Somos un salón de belleza integral, nos destacamos en servicios como uñas esculpidas, pedicura y depilación método español.">
+  <meta name="description"
+    content="Somos un salón de belleza integral, nos destacamos en servicios como uñas esculpidas, pedicura y depilación método español.">
 </head>
 
 <body class="body__contacto">
@@ -48,108 +49,76 @@
         </div>
       </div>
     </nav>
-  </header> 
+  </header>
   <main>
-  <!--formulario-->
-  <h1 class="titulo">Agenda tu turno</h1>
-  <form class="formulario">
-    <label for="nombre_apellido">Nombre:</label>
-    <input type="text" id="nombre_apellido" required>
 
-    <label for="email">Email</label>
-    <input type="email" id="email" required>
+    <section class="form-container">
+      <h1>Agenda tu turno</h1>
+      <form action="" autocomplete="off">
+        <div>
+          <label for="name">Nombre:</label>
+          <input type="text" id="name">
+        </div>
 
-    <label for="telefono">Telefono</label>
-    <input type="tel"id="telefono" required>
+        <div>
+          <label for="email">Email:</label>
+          <input type="email" id="email">
+        </div>
 
-    <label for="dias">Dias</label>
-    <input type="date" id="dias" required>
-    
-    <label for="horarios">Horario</label>
-    <select name="" id="horarios">
-      <option value="">08:00</option>
-      <option value="">09:00</option>
-      <option value="">10:00</option>
-      <option value="">12:00</option>
-      <option value="">15:00</option>
-    </select>
-   <div>
-    <textarea name="" id="" cols="30" rows="10" placeholder="Escriba su comentario"></textarea>
-    </div>
+        <div>
+          <label for="phone">Telefono:</label>
+          <input type="number" id="phone">
+        </div>
 
-    <input type="submit" value="Enviar mensaje">
-    <input type="reset" value="Borrar formulario">
-  </form>
-  <!--fin formulario-->
- 
- 
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, neque sint aliquam veritatis, architecto
-      voluptatibus quis sunt aspernatur perferendis fuga aliquid dolorem unde dolore fugiat a explicabo. Nam totam id
-      odio ex molestias quia, veritatis vitae fuga quis nostrum quibusdam, aliquid neque natus consequatur minus? Sint
-      asperiores magnam doloribus corporis quibusdam, qui excepturi reprehenderit obcaecati quis maxime ad sequi esse
-      recusandae soluta laudantium earum consectetur? Ipsum rerum distinctio, pariatur molestias harum incidunt quaerat
-     </p>
+        <div>
+          <label for="date">Dia:</label>
+          <input type="date">
+        </div>
+
+        <div>
+          <label for="hour">Horarios:</label>
+          <select id="hour">
+            <option value="">08:00</option>
+            <option value="">09:00</option>
+            <option value="">10:00</option>
+            <option value="">12:00</option>
+            <option value="">15:00</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="coment">Escriba su comentario</label>
+          <textarea name="" id="coment" cols="30" rows="10"></textarea>
+        </div>
+
+        <div>
+          <button type="submit">Agendar</button>
+          <button type="reset">Restear</button>
+        </div>
+      </form>
+
+    </section>
   </main>
 
   <!--footer inicio-->
-
   <footer class="footer">
-    <div class="container-body">
-      <div class="colum1">
-        <h1>Más información</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus quidem labore nihil esse voluptatum nemo
-          dolorum harum deserunt? Quisquam eaque omnis veniam ratione voluptatibus dolores minima alias architecto! Quo,
-          aspernatur.</p>
-      </div>
-      <div class="colum2">
-        <h1>Redes sociales</h1>
-        <div class="row">
-          <img src="" alt="">
-          <label>Síguenos en Facebook</label>
-        </div>
-        <div class="row">
-          <img src="" alt="">
-          <label>Síguenos en Instagram</label>
-        </div>
-        <div class="row">
-          <img src="" alt="">
-          <label>Síguenos en Twitter</label>
-        </div>
-        <div class="row">
-          <img src="" alt="">
-          <label>Síguenos en WhatsApp</label>
-        </div>
-      </div>
-      <div class="colum3">
-        <h1>Información</h1>
-        <div class="row2">
-          <img src="" alt="">
-          <label>somos un centro de belleza ubicado en Montevideo callé ...........</label>
-        </div>
-        <div class="row2">
-          <img src="" alt="">
-          <label>somos un centro de belleza ubicado en montevideo calle ...........</label>
-        </div>
-        <div class="row2">
-          <img src="" alt="">
-          <label>somos un centro de belleza ubicado en montevideo calle ...........</label>
-        </div>
-      </div>
-    </div>
-    <div class="conteiner-footer">
-      <div class="pie-pagina">
-        <div class="copyright">
-          &copy;2022 Todos los derechos reservados|Fiorela Gonnet
-        </div>
-        <div class="information">
-          <a class="a-footer" href="">Información</a>
-          <a class="a-footer" href="">Términos y condiciones</a>
-        </div>
-      </div>
-    </div>
-  </footer>
 
+    <section class="footer_social-medias">
+      <img src="../images/facebook.png" alt="">
+      <img src="../images/instagram.png" alt="">
+      <img src="../images/twitter.png" alt="">
+      <img src="../images/whatsapp.png" alt="">
+    </section>
+
+    <section class="footer_info">
+      <span class="footer_info_item">&copy;2022 Todos los derechos reservados | Fiorela Gonnet</span>
+      <a class="footer_info_item" href="#">Información</a>
+      <a class="footer_info_item" href="#">Términos y condiciones</a>
+    </section>
+
+  </footer>
   <!--fin footer-->
+
   <script src="../js/bootstrap.min.js"></script>
 
 </body>

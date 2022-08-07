@@ -4,26 +4,27 @@
     box-sizing: border-box;
 }
 
-.body {
-    font-family: Arial, Helvetica, sans-serif;
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     margin: 0;
     display: grid;
     min-height: 100vh;
     grid-template-rows: auto 1fr auto;
     background-color: antiquewhite;
-
-
+    overflow-x: hidden;
 }
 .body__contacto{
     background-color: antiquewhite;
 }
-
+.body__clientes{
+    background-color: coral;
+}
 /*inicio de estilos de clientes*/
 .foto-cliente {
     width: 200px;
     height: 150px;
 }
-
+ 
 .contenedor {
     margin: 10px;
     display: grid;
@@ -34,105 +35,22 @@
         " ana paula"
         "juana federica";
 }
-
+ 
 .ana {
     grid-area: ana;
 }
-
+ 
 .paula {
     grid-area: paula;
 }
-
+ 
 .juana {
     grid-area: juana;
 }
-
+ 
 .federica {
     grid-area: federica;
 }
-
-@media screen and (max-width: 740px) {
-    .contenedor {
-        grid-template-columns: (1, 2fr);
-        grid-template-rows: (4, 3fr);
-        grid-template-areas:
-            " ana"
-            "juana"
-            "paula"
-            "federica";
-    }
-
-    .ana {
-        grid-area: ana;
-    }
-
-    .paula {
-        grid-area: paula;
-    }
-
-    .juana {
-        grid-area: juana;
-    }
-
-    .federica {
-        grid-area: federica;
-    }
-
-}
-
-@media screen and (min-width: 1100px) {
-    .contenedor {
-        grid-template-columns: (3, 2fr);
-        grid-template-rows: (4, 3fr);
-        grid-template-areas:
-            " ana juana paula"
-            "federica 0 0";
-    }
-
-    .ana {
-        grid-area: ana;
-    }
-
-    .paula {
-        grid-area: paula;
-    }
-
-    .juana {
-        grid-area: juana;
-    }
-
-    .federica {
-        grid-area: federica;
-    }
-}
-
-@media screen and (min-width: 1500px) {
-    .contenedor {
-        height: 50vh;
-        grid-template-columns: (1, 2fr);
-        grid-template-rows: (1, 3fr);
-        grid-template-areas:
-        " ana juana paula federica";
-    }
-
-    .ana {
-        grid-area: ana;
-    }
-
-    .paula {
-        grid-area: paula;
-    }
-
-    .juana {
-        grid-area: juana;
-    }
-
-    .federica {
-        grid-area: federica;
-    }
-}
-
-
 .caja {
     width: 100%;
     text-align: center;
@@ -142,78 +60,162 @@
     flex-direction: column;
     align-items: center;
     border-radius: 10px;
-
-    &:hover {
-        transform: scale(1.1);
-    }
 }
-
 .descripcion-clientes {
     font-size: 20px;
     margin: 20px;
     align-items: center;
     text-align: center;
 }
+ 
+@media (max-width: 700px) {
+    .contenedor {
+        grid-template-columns: (1, 2fr);
+        grid-template-rows: (4, 3fr);
+        grid-template-areas:
+            " ana"
+            "juana"
+            "paula"
+            "federica";
+    }
+ 
+    .ana {
+        grid-area: ana;
+    }
+ 
+    .paula {
+        grid-area: paula;
+    }
+ 
+    .juana {
+        grid-area: juana;
+    }
+ 
+    .federica {
+        grid-area: federica;
+    }
+ 
+}
+ 
+@media (min-width:700px) and (max-width: 1100px) {
+    .contenedor {
+        grid-template-columns: (3, 2fr);
+        grid-template-rows: (4, 3fr);
+        grid-template-areas:
+            " ana juana paula"
+            "federica 0 0";
+    }
+ 
+    .ana {
+        grid-area: ana;
+    }
+ 
+    .paula {
+        grid-area: paula;
+    }
+ 
+    .juana {
+        grid-area: juana;
+    }
+ 
+    .federica {
+        grid-area: federica;
+    }
+}
+ 
+@media screen and (min-width: 1500px) {
+    .foto-cliente{
+        width: 350px;
+        height: 250px;
+    }
+    .contenedor{
+        margin: 40px;
+        gap: 40px;
+        align-items: center;
+        grid-template-columns: (2, 2fr);
+        grid-template-rows: (2, 3fr);
+        grid-template-areas:
+        "ana juana"
+        "paula federica";
+     
+   
+ 
+    .ana {
+        grid-area: ana;
+    }
+ 
+    .paula {
+        grid-area: paula;
+    }
+ 
+    .juana {
+        grid-area: juana;
+    }
+ 
+    .federica {
+        grid-area: federica;
+    }
+    }
+    .caja{
+        width: 100%;
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+}
+ 
+/*fin de clientes*/
+
 
 /*fin de clientes*/
 
 /*comienzo de estilos index*/
-.carousel-item {
-    width: 100%;
-    border: 3px solid coral;
-    border-radius: 10px;
-}
-.carousel-tamaño{
-    width: 30vw;
-}
-@media screen and (max-width: 1500px) {
-    
-    .carousel-tamaño{
-        width: 60vw;
-        
-    }
-}
 
-.bannerText{
-    width: 100vw;
+.container-historia{
     display: flex;
-    justify-content: center;
-    color: coral;    
+    flex-direction: column;
+    align-items: center;
 }
 
-.titulo {
+.container-historia_historia{
+    font-size: 20px;
+    max-width: 1200px;
+    margin: 40px 0;
+    text-align: center;
+    color: coral;
+    padding: 0 20px;
+}
+.container-historia_historia > p{
+    color: black;
+} 
+/*acerca de nosotros*/
+
+.titulo{
     color: coral;
 }
-
-.box {
-    height: 25px;
-
-}
-
-.historia-peinados{
-    font-size: 20px;
-    max-width: 1200px;
-    margin: 50px;
-    text-align: center;
-    h1{
-        color: coral;
-    }
-}
-.historia-trenzas{
-    font-size: 20px;
-    max-width: 1200px;
-    margin: 50px;
-    text-align: center;
-    h2{
-        color: coral;
-    }
-}
-/*acerca de nosotros*/
 .ul-quienes-somos {
-    text-align: center;
     list-style: none;
     padding: 15px;
+    text-align: center;
 }
+.titulo-quienes-somos{
+   margin: 30px 0;
+    text-align: center;
+}
+.foto-quienes-somos{
+    width: 90vw;
+    max-width: 800px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+}
+.contenedor-ac{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/*fin ac*/
 /* servicios*/
 .container-edp {
     display: flex;
@@ -329,6 +331,7 @@
 }
 
 /*fin de servicios*/
+
 /*navbar*/
 .container-fluid {
     font-size: 20px;
@@ -340,3 +343,114 @@
 
 /*fin navbar*/
 
+/*Carrusel y titulo*/
+.info-carrusel{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.info-carrusel_info{
+    text-align: center;
+    margin: 30px 0;
+}
+
+.info-carrusel_carrousel-container{
+    border-radius: 8px;
+    position: relative;
+    width: 90vw;
+    max-width: 1000px;
+    height: 550px;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.slider{
+    display: flex;
+    margin-left: -100%;
+    width: 300%; 
+    height: inherit;
+}
+
+.slider-section{
+    height: 100%;
+    width: 100%;
+}
+
+.slider-section > img{
+    height: inherit;
+    width: inherit;
+    object-position: center;
+}
+
+.slider-control{
+    color: rgb(255, 68, 0);
+    cursor: pointer;
+    font-size: 2.5rem;
+    height: 32px;
+    justify-content: center;
+    opacity: 60%;
+    position: absolute;
+    top: 43%;
+    width: 32px;
+}
+
+.slider-rigth{
+    right: 10px;
+}
+
+.slider-left{
+    left: 10px;
+}
+
+@media screen and (max-width: 800px) {
+    .carrousel-container{
+        border-radius: 8px;
+        position: relative;
+        width: 100vw;
+        max-width: 1000px;
+        height: 400px;
+        overflow: hidden;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    }    
+    .slider-section > img{
+        height: inherit;
+        width: inherit;
+        object-position: center;
+        object-fit: cover;
+    }
+}
+/*Fin de Carrusel y titulo*/
+
+/*Peinados en tendencias*/
+.container-peinados{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 10px 0;
+}
+.container-peinados_peinado{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+}
+.container-peinados_peinado > h2 {
+    margin-bottom: 20px;
+}
+.container-peinados_peinado_fotos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.container-peinados_peinado_fotos > img {
+    width: 100%;
+    height: 100%;
+    width: 350px;
+    height: 300px;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    object-fit: cover;
+    margin: 20px 0;
+}
+/*Fin de tendencias*/
