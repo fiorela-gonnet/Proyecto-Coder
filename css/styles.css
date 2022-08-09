@@ -1,3 +1,4 @@
+/*inicio estilos generales*/
 * {
   margin: 0;
   padding: 0;
@@ -22,13 +23,46 @@ body {
   background-color: coral;
 }
 
+.titulo {
+  color: coral;
+  text-align: center;
+  padding: 15px;
+}
+
+.titulo-clientes {
+  color: antiquewhite;
+  text-align: center;
+  font-size: 50px;
+  padding: 15px;
+}
+
+/*Fin estilos generales*/
+/*inicio estilos index*/
+.container-historia {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container-historia_historia {
+  font-size: 20px;
+  max-width: 1200px;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.container-historia_historia > p {
+  color: black;
+}
+
+/*fin de estilos index*/
 /*inicio de estilos de clientes*/
 .foto-cliente {
   width: 200px;
   height: 150px;
 }
 
-.contenedor {
+.contenedor-clientes {
   margin: 10px;
   display: grid;
   gap: 20px;
@@ -72,7 +106,7 @@ body {
 }
 
 @media (max-width: 700px) {
-  .contenedor {
+  .contenedor-clientes {
     grid-template-columns: 1, 2fr;
     grid-template-rows: 4, 3fr;
     grid-template-areas: " ana" "juana" "paula" "federica";
@@ -91,7 +125,7 @@ body {
   }
 }
 @media (min-width: 700px) and (max-width: 1100px) {
-  .contenedor {
+  .contenedor-clientes {
     grid-template-columns: 3, 2fr;
     grid-template-rows: 4, 3fr;
     grid-template-areas: " ana juana paula" "federica 0 0";
@@ -114,7 +148,7 @@ body {
     width: 350px;
     height: 250px;
   }
-  .contenedor {
+  .contenedor-clientes {
     margin: 40px;
     gap: 40px;
     align-items: center;
@@ -122,16 +156,16 @@ body {
     grid-template-rows: 2, 3fr;
     grid-template-areas: "ana juana" "paula federica";
   }
-  .contenedor .ana {
+  .contenedor-clientes .ana {
     grid-area: ana;
   }
-  .contenedor .paula {
+  .contenedor-clientes .paula {
     grid-area: paula;
   }
-  .contenedor .juana {
+  .contenedor-clientes .juana {
     grid-area: juana;
   }
-  .contenedor .federica {
+  .contenedor-clientes .federica {
     grid-area: federica;
   }
   .caja {
@@ -141,41 +175,17 @@ body {
     transform: scale(1.1);
   }
 }
-/*fin de clientes*/
-/*fin de clientes*/
-/*comienzo de estilos index*/
-.container-historia {
+/*fin de estilos clientes*/
+/*inicio estilos acerca de nosotros*/
+.contenedor-nosotros {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.container-historia_historia {
-  font-size: 20px;
-  max-width: 1200px;
-  margin: 40px 0;
-  text-align: center;
-  color: coral;
-  padding: 0 20px;
-}
-
-.container-historia_historia > p {
-  color: black;
-}
-
-/*acerca de nosotros*/
-.titulo {
-  color: coral;
-}
-
 .ul-quienes-somos {
   list-style: none;
   padding: 15px;
-  text-align: center;
-}
-
-.titulo-quienes-somos {
-  margin: 30px 0;
   text-align: center;
 }
 
@@ -186,91 +196,41 @@ body {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
-.contenedor-ac {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-/*fin ac*/
-/* servicios*/
-.container-edp {
+/*fin estilos acerca de nosotros*/
+/*inicio estilos de servicios*/
+.container-servicios {
   display: flex;
   justify-content: space-between;
   margin-top: 25px;
 }
 
-.colum-1 {
-  max-width: 400px;
-}
-.colum-1 h1 {
-  font-size: 32px;
-  text-align: center;
-  color: coral;
-}
-.colum-1 p {
-  font-size: 20px;
-  color: black;
-  margin: 15px;
-}
-
-.colum-2 {
-  max-width: 400px;
-}
-.colum-2 h1 {
-  font-size: 24px;
-  text-align: center;
-}
-.colum-2 p {
-  font-size: 14px;
-  color: black;
-  margin: 15px;
-  text-align: center;
-}
-
-.colum-3 {
-  max-width: 400px;
-}
-.colum-3 h1 {
-  font-size: 24px;
-  text-align: center;
-}
-.colum-3 p {
-  font-size: 14px;
-  color: black;
-  margin: 15px;
-  text-align: center;
-}
-
+.colum-1,
+.colum-2,
+.colum-3,
 .colum-4 {
   max-width: 400px;
 }
-.colum-4 h1 {
-  font-size: 24px;
+.colum-1 h2,
+.colum-2 h2,
+.colum-3 h2,
+.colum-4 h2 {
+  font-size: 30px;
   text-align: center;
+  color: coral;
+  background-color: white;
 }
+.colum-1 p,
+.colum-2 p,
+.colum-3 p,
 .colum-4 p {
-  font-size: 14px;
-  color: black;
+  font-size: 20px;
   margin: 15px;
   text-align: center;
 }
 
-.row-1 {
-  margin-top: 10px;
-  display: flex;
-}
-
-.row-2 {
-  margin-top: 10px;
-  display: flex;
-}
-
-.row-3 {
-  margin-top: 10px;
-  display: flex;
-}
-
+.row-1,
+.row-2,
+.row-3,
 .row-4 {
   margin-top: 10px;
   display: flex;
@@ -280,18 +240,16 @@ body {
   .container-edp {
     flex-wrap: wrap;
   }
-  .colum-1 {
-    max-width: 100%;
-  }
-  .colum-2,
+  .colum-1,
+.colum-2,
 .colum-3,
 .colum-4 {
     margin-top: 20px;
     max-width: 100%;
   }
 }
-/*fin de servicios*/
-/*navbar*/
+/*fin estilos de servicios*/
+/*estilos de navbar*/
 .container-fluid {
   font-size: 20px;
 }
@@ -300,8 +258,8 @@ body {
   font-size: 25px;
 }
 
-/*fin navbar*/
-/*Carrusel y titulo*/
+/*fin estilos navbar*/
+/*inicio estilos Carrusel y titulo*/
 .info-carrusel {
   display: flex;
   flex-direction: column;
@@ -379,7 +337,7 @@ body {
   }
 }
 /*Fin de Carrusel y titulo*/
-/*Peinados en tendencias*/
+/*inicio Peinados en tendencias*/
 .container-peinados {
   display: flex;
   flex-wrap: wrap;
@@ -578,7 +536,7 @@ body {
   padding: 2vh 7.5vw;
 }
 
-.galeria-grilla {
+.galeria-contenedor__grilla {
   height: 100vh;
   display: grid;
   gap: 20px;
@@ -587,7 +545,7 @@ body {
   grid-template-areas: "img2 img2 img2 img4 img4" "img2 img2 img2 img4 img4" "img3 img3 img1 img1 img1" "img3 img3 img1 img1 img1" "img3 img3 img5 img5 img5" "img3 img3 img5 img5 img5";
 }
 
-.galeria-grilla > img {
+.galeria-contenedor__grilla > img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -614,56 +572,56 @@ body {
 }
 
 @media screen and (max-width: 1100px) {
-  .galeria-grilla {
+  .galeria-contenedor__grilla {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(6, 10vh);
     grid-template-areas: "img2 img2 img2 img4" "img2 img2 img2 img4" "img3 img3 img1 img1" "img3 img3 img1 img1" "img3 img3 img5 img5" "img3 img3 img5 img5";
   }
-  .galeria-grilla .galeria-grilla > img {
+  .galeria-contenedor__grilla .galeria-grilla > img {
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
-  .galeria-grilla .galeria-img1 {
+  .galeria-contenedor__grilla .galeria-img1 {
     grid-area: img1;
   }
-  .galeria-grilla .galeria-img2 {
+  .galeria-contenedor__grilla .galeria-img2 {
     grid-area: img2;
   }
-  .galeria-grilla .galeria-img3 {
+  .galeria-contenedor__grilla .galeria-img3 {
     grid-area: img3;
   }
-  .galeria-grilla .galeria-img4 {
+  .galeria-contenedor__grilla .galeria-img4 {
     grid-area: img4;
   }
-  .galeria-grilla .galeria-img5 {
+  .galeria-contenedor__grilla .galeria-img5 {
     grid-area: img5;
   }
 }
-@media screen and (max-width: 1100px) and (max-width: 740px) {
-  .galeria-grilla {
+@media screen and (max-width: 1100px) and (max-width: 1100px) {
+  .galeria-contenedor__grilla {
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(11, 10vh);
+    grid-template-rows: repeat(10, 3fr);
     grid-template-areas: "img2 img2 " "img2 img2 " "img4 img4" "img4 img4" "img3 img3" "img3 img3" "img1 img1" "img1 img1" "img5 img5" "img5 img5";
   }
-  .galeria-grilla .galeria-grilla > img {
+  .galeria-contenedor__grilla .galeria-grilla > img {
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
-  .galeria-grilla .galeria-img1 {
+  .galeria-contenedor__grilla .galeria-img1 {
     grid-area: img1;
   }
-  .galeria-grilla .galeria-img2 {
+  .galeria-contenedor__grilla .galeria-img2 {
     grid-area: img2;
   }
-  .galeria-grilla .galeria-img3 {
+  .galeria-contenedor__grilla .galeria-img3 {
     grid-area: img3;
   }
-  .galeria-grilla .galeria-img4 {
+  .galeria-contenedor__grilla .galeria-img4 {
     grid-area: img4;
   }
-  .galeria-grilla .galeria-img5 {
+  .galeria-contenedor__grilla .galeria-img5 {
     grid-area: img5;
   }
 }
@@ -676,6 +634,7 @@ body {
 }
 .form-container h1 {
   margin-bottom: 30px;
+  color: coral;
 }
 .form-container form {
   display: flex;
@@ -688,14 +647,18 @@ body {
   flex-direction: column;
   margin-bottom: 20px;
 }
-.form-container form div input, .form-container form div select, .form-container form div textarea {
+.form-container form div input,
+.form-container form div select,
+.form-container form div textarea {
   border-radius: 5px;
   border: none;
   resize: none;
   padding: 3px 0;
   padding-left: 7px;
 }
-.form-container form div input:focus, .form-container form div select:focus, .form-container form div textarea:focus {
+.form-container form div input:focus,
+.form-container form div select:focus,
+.form-container form div textarea:focus {
   outline: none;
   padding-left: 7px;
   outline: 1px solid coral;

@@ -1,3 +1,4 @@
+/*inicio estilos generales*/
 * {
     margin: 0;
     padding: 0;
@@ -13,19 +14,58 @@ body {
     background-color: antiquewhite;
     overflow-x: hidden;
 }
-.body__contacto{
+
+.body__contacto {
     background-color: antiquewhite;
 }
-.body__clientes{
+
+.body__clientes {
     background-color: coral;
 }
+
+.titulo {
+    color: coral;
+    text-align: center;
+    padding: 15px;
+}
+
+.titulo-clientes {
+    color: antiquewhite;
+    text-align: center;
+    font-size: 50px;
+    padding: 15px;
+}
+
+/*Fin estilos generales*/
+
+/*inicio estilos index*/
+
+.container-historia {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container-historia_historia {
+    font-size: 20px;
+    max-width: 1200px;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.container-historia_historia>p {
+    color: black;
+}
+
+/*fin de estilos index*/
+
 /*inicio de estilos de clientes*/
 .foto-cliente {
     width: 200px;
     height: 150px;
 }
- 
-.contenedor {
+
+.contenedor-clientes {
     margin: 10px;
     display: grid;
     gap: 20px;
@@ -35,22 +75,23 @@ body {
         " ana paula"
         "juana federica";
 }
- 
+
 .ana {
     grid-area: ana;
 }
- 
+
 .paula {
     grid-area: paula;
 }
- 
+
 .juana {
     grid-area: juana;
 }
- 
+
 .federica {
     grid-area: federica;
 }
+
 .caja {
     width: 100%;
     text-align: center;
@@ -61,15 +102,16 @@ body {
     align-items: center;
     border-radius: 10px;
 }
+
 .descripcion-clientes {
     font-size: 20px;
     margin: 20px;
     align-items: center;
     text-align: center;
 }
- 
+
 @media (max-width: 700px) {
-    .contenedor {
+    .contenedor-clientes {
         grid-template-columns: (1, 2fr);
         grid-template-rows: (4, 3fr);
         grid-template-areas:
@@ -78,236 +120,151 @@ body {
             "paula"
             "federica";
     }
- 
+
     .ana {
         grid-area: ana;
     }
- 
+
     .paula {
         grid-area: paula;
     }
- 
+
     .juana {
         grid-area: juana;
     }
- 
+
     .federica {
         grid-area: federica;
     }
- 
+
 }
- 
+
 @media (min-width:700px) and (max-width: 1100px) {
-    .contenedor {
+    .contenedor-clientes {
         grid-template-columns: (3, 2fr);
         grid-template-rows: (4, 3fr);
         grid-template-areas:
             " ana juana paula"
             "federica 0 0";
     }
- 
+
     .ana {
         grid-area: ana;
     }
- 
+
     .paula {
         grid-area: paula;
     }
- 
+
     .juana {
         grid-area: juana;
     }
- 
+
     .federica {
         grid-area: federica;
     }
 }
- 
+
 @media screen and (min-width: 1500px) {
-    .foto-cliente{
+    .foto-cliente {
         width: 350px;
         height: 250px;
     }
-    .contenedor{
+
+    .contenedor-clientes {
         margin: 40px;
         gap: 40px;
         align-items: center;
         grid-template-columns: (2, 2fr);
         grid-template-rows: (2, 3fr);
         grid-template-areas:
-        "ana juana"
-        "paula federica";
-     
-   
- 
-    .ana {
-        grid-area: ana;
+            "ana juana"
+            "paula federica";
+
+
+
+        .ana {
+            grid-area: ana;
+        }
+
+        .paula {
+            grid-area: paula;
+        }
+
+        .juana {
+            grid-area: juana;
+        }
+
+        .federica {
+            grid-area: federica;
+        }
     }
- 
-    .paula {
-        grid-area: paula;
-    }
- 
-    .juana {
-        grid-area: juana;
-    }
- 
-    .federica {
-        grid-area: federica;
-    }
-    }
-    .caja{
+
+    .caja {
         width: 100%;
+
         &:hover {
             transform: scale(1.1);
         }
     }
 }
- 
-/*fin de clientes*/
 
+/*fin de estilos clientes*/
 
-/*fin de clientes*/
+/*inicio estilos acerca de nosotros*/
+.contenedor-nosotros {
 
-/*comienzo de estilos index*/
-
-.container-historia{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.container-historia_historia{
-    font-size: 20px;
-    max-width: 1200px;
-    margin: 40px 0;
-    text-align: center;
-    color: coral;
-    padding: 0 20px;
-}
-.container-historia_historia > p{
-    color: black;
-} 
-/*acerca de nosotros*/
-
-.titulo{
-    color: coral;
-}
 .ul-quienes-somos {
     list-style: none;
     padding: 15px;
     text-align: center;
 }
-.titulo-quienes-somos{
-   margin: 30px 0;
-    text-align: center;
-}
-.foto-quienes-somos{
+
+.foto-quienes-somos {
     width: 90vw;
     max-width: 800px;
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 
 }
-.contenedor-ac{
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-/*fin ac*/
-/* servicios*/
-.container-edp {
+/*fin estilos acerca de nosotros*/
+
+/*inicio estilos de servicios*/
+.container-servicios {
     display: flex;
     justify-content: space-between;
     margin-top: 25px;
 }
 
-.colum-1 {
+.colum-1,
+.colum-2,
+.colum-3,
+.colum-4 {
     max-width: 400px;
 
-    h1 {
-        font-size: 32px;
+    h2 {
+        font-size: 30px;
         text-align: center;
         color: coral;
+        background-color: white;
     }
 
     p {
         font-size: 20px;
-        color: black;
-        margin: 15px;
-    }
-}
-
-.colum-2 {
-    max-width: 400px;
-
-    h1 {
-        font-size: 24px;
-        text-align: center;
-    }
-
-    p {
-        font-size: 14px;
-        color: black;
-        margin: 15px;
-        text-align: center;
-    }
-
-}
-
-.colum-3 {
-    max-width: 400px;
-
-    h1 {
-        font-size: 24px;
-        text-align: center;
-
-    }
-
-    p {
-        font-size: 14px;
-        color: black;
         margin: 15px;
         text-align: center;
     }
 }
 
-.colum-4 {
-    max-width: 400px;
-
-    h1 {
-        font-size: 24px;
-        text-align: center;
-    }
-
-    p {
-        font-size: 14px;
-        color: black;
-        margin: 15px;
-        text-align: center;
-    }
-}
-
-.row-1 {
-    margin-top: 10px;
-    display: flex;
-    
-    
-}
-
-.row-2 {
-    margin-top: 10px;
-    display: flex;
-    
-
-}
-
-.row-3 {
-    margin-top: 10px;
-    display: flex;
-}
-
+.row-1,
+.row-2,
+.row-3,
 .row-4 {
     margin-top: 10px;
     display: flex;
@@ -318,10 +275,7 @@ body {
         flex-wrap: wrap;
     }
 
-    .colum-1 {
-        max-width: 100%;
-    }
-
+    .colum-1,
     .colum-2,
     .colum-3,
     .colum-4 {
@@ -330,9 +284,9 @@ body {
     }
 }
 
-/*fin de servicios*/
+/*fin estilos de servicios*/
 
-/*navbar*/
+/*estilos de navbar*/
 .container-fluid {
     font-size: 20px;
 }
@@ -341,21 +295,21 @@ body {
     font-size: 25px;
 }
 
-/*fin navbar*/
+/*fin estilos navbar*/
 
-/*Carrusel y titulo*/
-.info-carrusel{
+/*inicio estilos Carrusel y titulo*/
+.info-carrusel {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.info-carrusel_info{
+.info-carrusel_info {
     text-align: center;
     margin: 30px 0;
 }
 
-.info-carrusel_carrousel-container{
+.info-carrusel_carrousel-container {
     border-radius: 8px;
     position: relative;
     width: 90vw;
@@ -365,25 +319,25 @@ body {
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
-.slider{
+.slider {
     display: flex;
     margin-left: -100%;
-    width: 300%; 
+    width: 300%;
     height: inherit;
 }
 
-.slider-section{
+.slider-section {
     height: 100%;
     width: 100%;
 }
 
-.slider-section > img{
+.slider-section>img {
     height: inherit;
     width: inherit;
     object-position: center;
 }
 
-.slider-control{
+.slider-control {
     color: rgb(255, 68, 0);
     cursor: pointer;
     font-size: 2.5rem;
@@ -395,16 +349,16 @@ body {
     width: 32px;
 }
 
-.slider-rigth{
+.slider-rigth {
     right: 10px;
 }
 
-.slider-left{
+.slider-left {
     left: 10px;
 }
 
 @media screen and (max-width: 800px) {
-    .carrousel-container{
+    .carrousel-container {
         border-radius: 8px;
         position: relative;
         width: 100vw;
@@ -412,38 +366,44 @@ body {
         height: 400px;
         overflow: hidden;
         box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    }    
-    .slider-section > img{
+    }
+
+    .slider-section>img {
         height: inherit;
         width: inherit;
         object-position: center;
         object-fit: cover;
     }
 }
+
 /*Fin de Carrusel y titulo*/
 
-/*Peinados en tendencias*/
-.container-peinados{
+/*inicio Peinados en tendencias*/
+.container-peinados {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     margin: 10px 0;
 }
-.container-peinados_peinado{
+
+.container-peinados_peinado {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 20px 0;
 }
-.container-peinados_peinado > h2 {
+
+.container-peinados_peinado>h2 {
     margin-bottom: 20px;
 }
-.container-peinados_peinado_fotos{
+
+.container-peinados_peinado_fotos {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
-.container-peinados_peinado_fotos > img {
+
+.container-peinados_peinado_fotos>img {
     width: 100%;
     height: 100%;
     width: 350px;
@@ -453,4 +413,5 @@ body {
     object-fit: cover;
     margin: 20px 0;
 }
+
 /*Fin de tendencias*/

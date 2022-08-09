@@ -7,28 +7,28 @@
     text-align: center;
 }
 
-.footer_social-medias{ 
+.footer_social-medias {
     display: flex;
     justify-content: center;
 }
 
-.footer_social-medias > img {
+.footer_social-medias>img {
     width: 40px;
     margin-right: 10vw;
 }
 
-.footer_social-medias > :last-child{
+.footer_social-medias> :last-child {
     margin-right: 0;
 }
 
-.footer_info{
+.footer_info {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 30px;
 }
 
-.footer_info_item{
+.footer_info_item {
     margin-bottom: 10px;
 }
 
